@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<?xml-stylesheet href="configuration.xsl"?>
+<configuration>
+    <property>
+        <name>yarn.nodemanager.aux-services</name>
+        <value>mapreduce.shuffle</value>
+    </property>
+    <property>
+        <name>yarn.nodemanager.aux-services.mapreduce.shuffle.class</name>
+        <value>org.apache.hadoop.mapred.ShuffleHandler</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.address</name>
+        <value><%= @node[:hadoop][:namenode_host] %>:8040</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.resource-tracker.address</name>
+        <value><%= @node[:hadoop][:namenode_host] %>:8025</value>
+    </property>
+    <property>
+        <name>yarn.resourcemanager.scheduler.address</name>
+        <value><%= @node[:hadoop][:namenode_host] %>:8030</value>
+    </property>
+</configuration>

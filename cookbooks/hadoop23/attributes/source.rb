@@ -1,0 +1,9 @@
+default[:hadoop][:username] = 'hadoop'
+default[:hadoop][:password] = "$6$Rd0g63z95/$eSUZVufg.DytP.ETlrnzZWxRh19VgMZTG5QTRddNbZu0pyddjm1c0WSLamJ8a.N.bAA6dijr6684yTm0WzVBo." #hadoop
+default[:hadoop][:download_url] = "http://www.apache.org/dist/hadoop/common/hadoop-0.23.0/hadoop-0.23.0.tar.gz"
+default[:hadoop][:archive_name] = "hadoop-0.23.0.tar.gz"
+default[:hadoop][:folder_name] = "hadoop-0.23.0"
+default[:hadoop][:path] = "/opt/hadoop-0.23.0"
+default[:hadoop][:hdfs_folder] = "#{default['hadoop']['path']}/hdfs"
+default[:hadoop][:namenode_host] = "dev-namenode"
+default[:hadoop][:namenode_backup_host] = "dev-namenode-backup"
